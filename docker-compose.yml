@@ -1,0 +1,13 @@
+version: "3" ## especifica a versão do docker-compose file
+
+services: 
+  app: 
+    build: . 
+    command: npm run dev
+    environment:
+      CLIENT_TOKEN: MTAwMjM3MzQ5MDY5Mjg3MDE4Ng.GvI_IU.IhFuIEuB6XQc5uMCBEGVHdA9ec7QcIIsmQVyUY
+      TEST_GUILD: 1039160278744580136
+    ports:
+      - "53011:3000" 
+    volumes:
+      - .:/usr/app 
