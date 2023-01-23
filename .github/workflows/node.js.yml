@@ -8,7 +8,8 @@ on:
     branches: [ "main" ]
     
 env:
-  TEST_GUILD: 1039160278744580136
+  CLIENT_TOKEN: ${{ env.CLIENT_TOKEN }}
+  TEST_GUILD: ${{ env.TEST_GUILD }}
   
 jobs:
   build:
@@ -27,7 +28,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: echo ${{ secrets.CLIENT_TOKEN }}
+    - run: echo ${{ env.CLIENT_TOKEN }}
     - run: npm install
     - run: npm run build --if-present
     - run: npm run start
