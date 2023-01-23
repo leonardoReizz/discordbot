@@ -11,8 +11,8 @@ on:
 jobs:
   build:
     env:
-      CLIENT_TOKEN: ${{ secrets.CLIENT_TOKEN }}
-      TEST_GUILD: ${{ secrets.TEST_GUILD }}
+      CLIENT_TOKEN: ${{ vars.CLIENT_TOKEN }}
+      TEST_GUILD: ${{ vars.TEST_GUILD }}
     runs-on: self-hosted
     
     strategy:
@@ -27,7 +27,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: echo ${{ env.CLIENT_TOKEN }}
+    - run: echo ${{ vars.CLIENT_TOKEN }}
     - run: echo ${{ env.TOKEN_GUILD }}
     - run: npm install
     - run: npm run build --if-present
