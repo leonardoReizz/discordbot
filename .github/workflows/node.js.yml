@@ -11,7 +11,8 @@ on:
 jobs:
   build:
     env:
-      CLIENT_TOKEN: ${{ secrets.CLIENT_TOKEN }}
+      CLIENT_TOKEN: ${{ vars.CLIENT_TOKEN }}
+      TEST_GUILD: ${{ vars.TEST_GUILD }}
     runs-on: self-hosted
     
     strategy:
