@@ -7,7 +7,7 @@ on:
   push:
     branches: [ "main" ]
 env:
-  CLIENT_TOKEN: MTAwMjM3MzQ5MDY5Mjg3MDE4Ng.GvI_IU.IhFuIEuB6XQc5uMCBEGVHdA9ec7QcIIsmQVyUY
+  CLIENT_TOKEN: MTAwMjM3MzQ5MDY5Mjg3MDE4Ng.Gs-txN.Tb6J5AmKa7XsUZf90cm6ehjSiaiyGIzkcgiDI0
   TEST_GUILD: 1039160278744580136
 jobs:
   build:
