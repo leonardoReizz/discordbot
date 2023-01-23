@@ -6,9 +6,10 @@ name: Node.js CI
 on:
   push:
     branches: [ "main" ]
-
-
+    
+env:
   TEST_GUILD: 1039160278744580136
+  
 jobs:
   build:
 
