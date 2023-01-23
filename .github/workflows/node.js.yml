@@ -25,7 +25,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: echo ${{ env.CLIENT_TOKEN }}
+    - run: echo ${{ secret.CLIENT_TOKEN }}
     - run: npm install
     - run: npm run build --if-present
     - run: npm run start
