@@ -10,7 +10,8 @@ on:
   
 jobs:
   build:
-
+    env:
+      CLIENT_TOKEN: ${{ secrets.CLIENT_TOKEN }}
     runs-on: self-hosted
     
     strategy:
@@ -25,7 +26,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: echo ${{ secret.CLIENT_TOKEN }}
+    - run: echo ${{ env.CLIENT_TOKEN }}
     - run: npm install
     - run: npm run build --if-present
     - run: npm run start
