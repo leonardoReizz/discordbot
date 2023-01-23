@@ -11,4 +11,6 @@ COPY . .
 
 EXPOSE 53011
 
+
+CMD npm install nodemon
 CMD npm run dev
