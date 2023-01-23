@@ -5,8 +5,8 @@ services:
     build: . 
     command: npm run dev
     environment:
-      CLIENT_TOKEN: MTAwMjM3MzQ5MDY5Mjg3MDE4Ng.GvI_IU.IhFuIEuB6XQc5uMCBEGVHdA9ec7QcIIsmQVyUY
-      TEST_GUILD: 1039160278744580136
+      CLIENT_TOKEN: 
+      TEST_GUILD: 
     ports:
       - "53011:3000" 
     volumes:
