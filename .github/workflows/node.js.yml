@@ -7,15 +7,14 @@ on:
   push:
     branches: [ "main" ]
     
-env:
-  CLIENT_TOKEN: ${{ env.CLIENT_TOKEN }}
-  TEST_GUILD: ${{ env.TEST_GUILD }}
   
 jobs:
   build:
 
     runs-on: self-hosted
-
+    env:
+      CLIENT_TOKEN: ${{ env.CLIENT_TOKEN }}
+      TEST_GUILD: ${{ env.TEST_GUILD }}
     strategy:
       matrix:
         node-version: [16.16]
